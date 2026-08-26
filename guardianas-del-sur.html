@@ -1,1 +1,863 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guardianas del Sur | Asociación Greengalaxy</title>
+
+    <meta name="description" content="Guardianas del Sur. Serie documental sobre patrimonio cultural inmaterial y el rol de las mujeres como portadoras de saberes tradicionales en Chiloé.">
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =========================
+           CONFIGURACIÓN GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #26352d;
+            background: #f7f6f1;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(247, 246, 241, 0.96);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(38, 53, 45, 0.08);
+        }
+
+        nav {
+            height: 82px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 30px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            color: #29483a;
+        }
+
+        .logo span {
+            display: block;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            font-weight: 500;
+
+            margin-top: -5px;
+
+            color: #7b8d80;
+        }
+
+        .back-link {
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #425348;
+
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #8a6f43;
+        }
+
+
+        /* =========================
+           PORTADA DEL PROYECTO
+        ========================= */
+
+        .project-hero {
+
+            min-height: 75vh;
+
+            padding-top: 82px;
+
+            display: flex;
+
+            align-items: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(22, 43, 34, 0.90),
+                    rgba(22, 43, 34, 0.62),
+                    rgba(22, 43, 34, 0.25)
+                ),
+                url('foto-guardianas-1.jpg')
+                center/cover no-repeat;
+        }
+
+        .hero-content {
+
+            max-width: 800px;
+
+            color: white;
+
+            padding: 100px 0;
+        }
+
+        .eyebrow {
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            margin-bottom: 22px;
+
+            color: #d9c79d;
+        }
+
+        .project-hero h1 {
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: 0.95;
+
+            margin-bottom: 30px;
+        }
+
+        .project-hero h1 span {
+
+            color: #d8c69d;
+        }
+
+        .project-hero p {
+
+            max-width: 650px;
+
+            font-size: 17px;
+
+            font-weight: 300;
+
+            line-height: 1.9;
+
+            color: rgba(255,255,255,0.92);
+        }
+
+
+        /* =========================
+           DESCRIPCIÓN
+        ========================= */
+
+        .description {
+
+            padding: 120px 0;
+
+            background: #f7f6f1;
+        }
+
+        .description-grid {
+
+            display: grid;
+
+            grid-template-columns: 0.8fr 1.5fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+        .section-label {
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            font-size: 10px;
+
+            color: #8a6f43;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+        .description h2 {
+
+            font-size: 56px;
+
+            line-height: 1.05;
+
+            color: #29483a;
+        }
+
+        .description-text {
+
+            font-size: 16px;
+
+            color: #59665e;
+
+            line-height: 2;
+        }
+
+        .description-text p {
+
+            margin-bottom: 25px;
+        }
+
+        .description-text strong {
+
+            color: #29483a;
+        }
+
+
+        /* =========================
+           FOTOGRAFÍAS
+        ========================= */
+
+        .gallery {
+
+            padding: 110px 0;
+
+            background: #eeece4;
+        }
+
+        .gallery-header {
+
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .gallery-header h2 {
+
+            font-size: 60px;
+
+            color: #29483a;
+        }
+
+        .gallery-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .gallery-item {
+
+            overflow: hidden;
+
+            background: white;
+
+            aspect-ratio: 4 / 3;
+        }
+
+        .gallery-item img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           VIDEO
+        ========================= */
+
+        .video-section {
+
+            padding: 120px 0;
+
+            background: #29483a;
+
+            color: white;
+        }
+
+        .video-header {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        .video-header .section-label {
+
+            color: #d9c79d;
+        }
+
+        .video-header h2 {
+
+            font-size: 60px;
+
+            margin-bottom: 15px;
+        }
+
+        .video-header p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: rgba(255,255,255,0.72);
+
+            font-size: 14px;
+        }
+
+        .video-container {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            background: #17291f;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
+
+        .video-container video {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =========================
+           CIERRE
+        ========================= */
+
+        .closing {
+
+            padding: 110px 0;
+
+            background: #f7f6f1;
+
+            text-align: center;
+        }
+
+        .closing h2 {
+
+            font-size: 55px;
+
+            color: #29483a;
+
+            margin-bottom: 25px;
+        }
+
+        .closing p {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: #657168;
+
+            font-size: 15px;
+
+            line-height: 2;
+        }
+
+        .button-dark {
+
+            display: inline-block;
+
+            margin-top: 35px;
+
+            padding: 15px 30px;
+
+            background: #29483a;
+
+            color: white;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+        .button-dark:hover {
+
+            background: #8a6f43;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            background: #1d3027;
+
+            color: white;
+
+            padding: 50px 0;
+        }
+
+        .footer-content {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        .footer-logo {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 28px;
+        }
+
+        .footer-text {
+
+            color: rgba(255,255,255,0.55);
+
+            font-size: 11px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .description-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+            }
+
+            .description h2,
+            .gallery-header h2,
+            .video-header h2,
+            .closing h2 {
+
+                font-size: 45px;
+            }
+
+            .gallery-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+
+                display: block;
+
+                text-align: center;
+            }
+
+            .footer-text {
+
+                margin-top: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENÚ
+    ========================= -->
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <a href="index.html" class="logo">
+
+                    GREENgalaxy
+
+                    <span>ASOCIACIÓN</span>
+
+                </a>
+
+                <a href="index.html" class="back-link">
+
+                    ← Volver al sitio
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         PORTADA
+    ========================= -->
+
+    <section class="project-hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Proyecto · Patrimonio Cultural
+                </div>
+
+                <h1>
+                    Guardianas<br>
+                    <span>del Sur</span>
+                </h1>
+
+                <p>
+                    Serie documental que pone en valor el patrimonio
+                    cultural inmaterial y visibiliza el rol de las mujeres
+                    como portadoras y transmisoras de saberes tradicionales
+                    en Chiloé.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         DESCRIPCIÓN
+    ========================= -->
+
+    <section class="description">
+
+        <div class="container">
+
+            <div class="description-grid">
+
+                <div>
+
+                    <div class="section-label">
+                        El proyecto
+                    </div>
+
+                    <h2>
+                        Mujeres que guardan la memoria.
+                    </h2>
+
+                </div>
+
+
+                <div class="description-text">
+
+                    <p>
+
+                        <strong>Guardianas del Sur</strong> es una serie
+                        documental dedicada a relevar el patrimonio cultural
+                        inmaterial de Chiloé a través de las historias,
+                        experiencias y conocimientos de mujeres que mantienen
+                        vivos saberes tradicionales de sus comunidades.
+
+                    </p>
+
+                    <p>
+
+                        El proyecto busca reconocer el importante papel que
+                        cumplen estas mujeres como portadoras, cuidadoras y
+                        transmisoras de conocimientos que forman parte de la
+                        identidad cultural del territorio.
+
+                    </p>
+
+                    <p>
+
+                        A través del registro audiovisual de sus testimonios,
+                        prácticas y experiencias, Guardianas del Sur busca
+                        contribuir a la valoración y difusión de estos saberes,
+                        acercándolos a nuevas generaciones y fortaleciendo el
+                        vínculo entre las comunidades y su patrimonio.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOTOGRAFÍAS
+    ========================= -->
+
+    <section class="gallery">
+
+        <div class="container">
+
+            <div class="gallery-header">
+
+                <div class="section-label">
+                    Registro audiovisual
+                </div>
+
+                <h2>
+                    Guardianas del Sur
+                </h2>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <!-- FOTO 1 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="foto-guardianas-1.jpg"
+                        alt="Guardianas del Sur"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 2 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="foto-guardianas-2.jpg"
+                        alt="Guardianas del Sur"
+                    >
+
+                </div>
+
+
+                <!-- FOTO 3 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="foto-guardianas-3.jpg"
+                        alt="Guardianas del Sur"
+                    >
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         VIDEO
+    ========================= -->
+
+    <section class="video-section">
+
+        <div class="container">
+
+            <div class="video-header">
+
+                <div class="section-label">
+                    Video
+                </div>
+
+                <h2>
+                    Conoce Guardianas del Sur
+                </h2>
+
+                <p>
+                    Registro audiovisual del proyecto y de las historias
+                    que forman parte de esta iniciativa.
+                </p>
+
+            </div>
+
+
+            <div class="video-container">
+
+                <video controls>
+
+                    <source
+                        src="video-guardianas.mp4"
+                        type="video/mp4"
+                    >
+
+                    Tu navegador no permite reproducir este video.
+
+                </video>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CIERRE
+    ========================= -->
+
+    <section class="closing">
+
+        <div class="container">
+
+            <div class="section-label">
+                Asociación Greengalaxy
+            </div>
+
+            <h2>
+                Patrimonio que permanece.
+            </h2>
+
+            <p>
+
+                Guardianas del Sur busca contribuir al reconocimiento,
+                valoración y difusión de los saberes tradicionales que
+                forman parte de la memoria cultural de las comunidades
+                de Chiloé.
+
+            </p>
+
+            <a href="index.html" class="button-dark">
+
+                ← Volver al sitio principal
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-logo">
+                    Asociación Greengalaxy
+                </div>
+
+                <div class="footer-text">
+                    Patrimonio · Medioambiente · Sostenibilidad
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
 
