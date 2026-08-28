@@ -8,12 +8,12 @@
 <title>Fomento del Libro y la Lectura | Greengalaxy</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
- 
+
 * {
     margin:0;
     padding:0;
@@ -36,6 +36,8 @@ h1,h2 {
     max-width:1100px;
     margin:auto;
 }
+
+/* MENÚ */
 
 header {
     height:82px;
@@ -63,6 +65,12 @@ nav {
     text-transform:uppercase;
     color:#425348;
 }
+
+.back:hover {
+    color:#8a6f43;
+}
+
+/* PORTADA */
 
 .hero {
     background:#29483a;
@@ -92,6 +100,8 @@ nav {
     font-weight:300;
 }
 
+/* DESCRIPCIÓN */
+
 .description {
     padding:100px 0;
 }
@@ -108,6 +118,8 @@ nav {
     font-size:16px;
     line-height:2;
 }
+
+/* FOTOS */
 
 .gallery {
     background:#eeece4;
@@ -131,12 +143,15 @@ nav {
     width:100%;
     height:300px;
     object-fit:cover;
+    display:block;
     transition:.4s;
 }
 
 .gallery img:hover {
     transform:scale(1.03);
 }
+
+/* BOTÓN */
 
 .return {
     text-align:center;
@@ -153,6 +168,12 @@ nav {
     text-transform:uppercase;
 }
 
+.button:hover {
+    background:#8a6f43;
+}
+
+/* FOOTER */
+
 footer {
     background:#1d3027;
     color:white;
@@ -165,10 +186,18 @@ footer p {
     font-size:11px;
 }
 
+/* RESPONSIVE */
+
 @media(max-width:800px) {
 
     .gallery-grid {
         grid-template-columns:1fr;
+    }
+
+    .hero h1,
+    .description h2,
+    .gallery h2 {
+        font-size:45px;
     }
 
 }
@@ -178,6 +207,8 @@ footer p {
 </head>
 
 <body>
+
+<!-- MENÚ -->
 
 <header>
 
@@ -199,6 +230,8 @@ GREENgalaxy
 
 </header>
 
+
+<!-- PORTADA -->
 
 <section class="hero">
 
@@ -223,6 +256,8 @@ la reflexión, el aprendizaje y el bienestar integral.
 </section>
 
 
+<!-- DESCRIPCIÓN -->
+
 <section class="description">
 
 <div class="container">
@@ -233,9 +268,9 @@ Sobre el proyecto
 
 <p>
 El Ciclo de Charlas de Fomento del Libro y la Lectura es una
-iniciativa desarrollada en Hotel Museo El Greco, orientada a
-promover la lectura, la reflexión y el aprendizaje a través
-del encuentro y la conversación.
+iniciativa desarrollada en conjunto con el Hotel Museo El Greco en
+la ciudad de Puerto Varas,orientado a promover la lectura, la reflexión
+y el aprendizaje a través del encuentro y la conversación.
 </p>
 
 <br>
@@ -252,6 +287,8 @@ participan en estas actividades.
 </section>
 
 
+<!-- FOTOGRAFÍAS -->
+
 <section class="gallery">
 
 <div class="container">
@@ -262,14 +299,54 @@ Registro del proyecto
 
 <div class="gallery-grid">
 
-<img src="libro-1.jpg"
-     alt="Ciclo de Charlas de Fomento del Libro y la Lectura">
 
-<img src="libro-2.jpg"
-     alt="Ciclo de Charlas de Fomento del Libro y la Lectura">
+<!-- FOTO 1 -->
 
-<img src="libro-3.jpg"
-     alt="Ciclo de Charlas de Fomento del Libro y la Lectura">
+<img
+    src="libro1.jpg"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
+
+<!-- FOTO 2 -->
+
+<img
+    src="libro2.jpg"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
+
+<!-- FOTO 3 -->
+
+<img
+    src="libro3.jpg"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
+
+<!-- FOTO 4 -->
+
+<img
+    src="libro4.jpg"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
+
+<!-- FOTO 5 -->
+
+<img
+    src="libro5.jpg"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
+
+<!-- FOTO 6 -->
+
+<img
+    src="libro6.JPG"
+    alt="Ciclo de Charlas de Fomento del Libro y la Lectura"
+>
+
 
 </div>
 
@@ -277,6 +354,8 @@ Registro del proyecto
 
 </section>
 
+
+<!-- VOLVER -->
 
 <section class="return">
 
@@ -286,6 +365,8 @@ Registro del proyecto
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
