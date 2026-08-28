@@ -336,71 +336,159 @@
         }
 
 
-        ```html
-<!-- =========================
-     VIDEO / YOUTUBE
-========================= -->
+        /* =========================
+           VIDEO / YOUTUBE
+        ========================= */
 
-<section class="video-section">
+        .video-section {
 
-    <div class="container">
+            padding: 120px 0;
 
-        <div class="video-header">
+            background: #29483a;
 
-            <div class="section-label">
-                Registro audiovisual
-            </div>
+            color: white;
+        }
 
-            <h2>
-                Conoce Guardianas del Sur
-            </h2>
+        .video-header {
 
-            <p>
-                Puedes conocer la serie documental y las historias
-                que forman parte de esta iniciativa en nuestro canal
-                de YouTube.
-            </p>
+            text-align: center;
 
-        </div>
+            margin-bottom: 50px;
+        }
+
+        .video-header .section-label {
+
+            color: #d9c79d;
+        }
+
+        .video-header h2 {
+
+            font-size: 60px;
+
+            margin-bottom: 15px;
+        }
+
+        .video-header p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: rgba(255,255,255,0.72);
+
+            font-size: 14px;
+        }
 
 
-        <div class="youtube-box">
+        /* =========================
+           CAJA DE YOUTUBE
+        ========================= */
 
-            <div class="youtube-icon"></div>
+        .youtube-box {
 
-            <h3>
-                Mira el documental
-            </h3>
+            max-width: 950px;
 
-            <p>
-                Haz clic en el siguiente botón para ver
-                <strong>Guardianas del Sur</strong> directamente
-                en YouTube.
-            </p>
+            margin: auto;
 
+            padding: 65px 40px;
 
-            <a
-                href="https://www.youtube.com/watch?v=5GSZdA_zLec&list=PLZgJTYl0O3f27aIDVzvp221_4hNJLeOtq"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="youtube-button"
-            >
-                ▶ Ver en YouTube
-            </a>
+            text-align: center;
 
-        </div>
+            background: #17291f;
 
-    </div>
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+        }
 
-</section>
-```
-{
+        .youtube-icon {
 
-            display: block;
+            width: 70px;
 
-            width: 100%;
+            height: 50px;
 
-            height: auto;
+            margin: 0 auto 25px;
+
+            background: white;
+
+            border-radius: 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+        .youtube-icon::after {
+
+            content: "";
+
+            width: 0;
+
+            height: 0;
+
+            border-top: 10px solid transparent;
+
+            border-bottom: 10px solid transparent;
+
+            border-left: 16px solid #29483a;
+
+            margin-left: 4px;
+        }
+
+        .youtube-box h3 {
+
+            font-size: 38px;
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+
+            color: white;
+        }
+
+        .youtube-box p {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: rgba(255,255,255,0.72);
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+        .youtube-button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 16px 32px;
+
+            background: #d9c79d;
+
+            color: #29483a;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+        }
+
+        .youtube-button:hover {
+
+            background: white;
+
+            transform: translateY(-2px);
         }
 
 
@@ -529,6 +617,16 @@
             .gallery-grid {
 
                 grid-template-columns: 1fr;
+            }
+
+            .youtube-box {
+
+                padding: 50px 25px;
+            }
+
+            .youtube-box h3 {
+
+                font-size: 30px;
             }
 
             .footer-content {
@@ -752,7 +850,7 @@
 
 
     <!-- =========================
-         VIDEO
+         VIDEO / YOUTUBE
     ========================= -->
 
     <section class="video-section">
@@ -762,33 +860,44 @@
             <div class="video-header">
 
                 <div class="section-label">
-                    Video
+                    Registro audiovisual
                 </div>
 
                 <h2>
-                    Conoce Guardianas del Sur
+                    Guardianas del Sur
                 </h2>
 
                 <p>
-                    Registro audiovisual del proyecto y de las historias
-                    que forman parte de esta iniciativa.
+                    Conoce las historias y saberes de las mujeres
+                    que mantienen vivo el patrimonio cultural de Chiloé.
                 </p>
 
             </div>
 
 
-            <div class="video-container">
+            <div class="youtube-box">
 
-                <video controls>
+                <div class="youtube-icon"></div>
 
-                    <source
-                        src="video-guardianas.mp4"
-                        type="video/mp4"
-                    >
+                <h3>
+                    Mira aquí el capítulo de Uberlinda, una tejedora en Quelgo de la Isla de Achao, Chiloé
+                </h3>
 
-                    Tu navegador no permite reproducir este video.
+                <p>
+                    Haz clic en el siguiente botón para conocer la historia
+                    de Uberlinda y su relación con el tejido tradicional
+                    de Chiloé.
+                </p>
 
-                </video>
+
+                <a
+                    href="https://www.youtube.com/watch?v=5GSZdA_zLec&list=PLZgJTYl0O3f27aIDVzvp221_4hNJLeOtq"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-button"
+                >
+                    ▶ Ver capítulo en YouTube
+                </a>
 
             </div>
 
@@ -864,4 +973,3 @@
 
 </html>
 ```
-
